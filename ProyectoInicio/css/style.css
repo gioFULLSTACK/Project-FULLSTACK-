@@ -1,0 +1,302 @@
+:root {
+    /* all the generic stuff that applies to most of the page so that u dont have to individually change every element */
+    --ColorPrincipal: #00E497;
+    --ColorSecundario: #02052F;
+    --FontPrincipal: 'Open Sans', sans-serif;
+
+    /* font-family: 'Sigmar', cursive;  una opzione di font copiata da google*/
+}
+
+
+htlm {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--FontPrincipal);
+}
+
+/* esto hace que la relacion entre rem y px sea de 1REM=10px*/
+
+.contenedor {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.location {
+    background-color: var(--ColorSecundario);
+    color: #fff;
+}
+
+.location .contenedor div,
+.location h3,
+.location p {
+    display: inline;
+}
+
+.Descubre {
+    /* background-color:white ; */
+    padding-top: 80px;
+    margin-bottom: 3rem;
+}
+
+.Descubre strong {
+    background-color: #fff;
+    color: var(--ColorSecundario);
+    display: block;
+    font-size: 4.7rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+
+
+}
+
+.PrimeraSeccion a:hover{
+    background-color:white ;
+    color:var(--ColorSecundario)
+}
+
+.PrimeraSeccion a{
+    background-color: var(--ColorSecundario);
+    color: #fff;
+    padding: 2.4rem 9.4rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 700px;
+    font-size: 1.4rem;
+    bordern:2px solid var(--ColorSecundario)
+
+}
+
+.banner {
+    background-image: url(../Img/11641891319_banner_zona_norte.png);
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+    background-position: top left;
+    background-size: cover; 
+    padding-top: 80px;
+    padding-bottom: 180px;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    box-sizing: border-box;
+    display: block;
+}
+
+.BottoneIscrivi div {
+    color: var(--ColorSecundario);
+    border: 2px solid var(--ColorSecundario);
+    padding: 20px 44px;
+    bottom: 50px;
+    background: #fff;
+    color: #02052F;
+    border-color: #fff;
+}
+
+.BottoneIscrivi div {
+    background-image: url(../Img/Curso-marketing-digital-norte.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    min-height:300px;
+    margin-bottom: 30px;
+    padding: 40px 60px;
+    margin-top:30px;
+}
+.BottoneIscrivi a{
+    background-color: ;
+}
+
+.Programacion {
+    background-image: url(../Img/Curso-programacion-web-full-stack-norte.png);
+    background-repeat: no-repeat;
+    min-height: 300px;
+    text-align: right;
+    background-size: auto;
+    border-radius: 10px;
+    background-position: right;
+    margin-bottom: 30px;
+    padding: 40px 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: var(--ColorSecundario);
+    text-align: left;
+    line-height: 1.5;
+}
+
+
+.cta {
+
+    min-height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 24px 94px;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    border: 2px solid var(--ColorSecundario);
+    background: var(--ColorSecundario);
+    border-radius: 10px;
+    padding: 20px 44px;
+    position: absolute;
+    bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    padding: 50px;
+    margin: 50px;
+}
+
+.Login a {
+    color: var(--ColorPrincipal);
+    text-decoration: none;
+    background-color: transparent;
+    font-size: rem;
+    font-family: var(--FontPrincipal);
+}
+
+.Info1 {
+    color: var(--ColorSecundario);
+    font-family: var(--FontPrincipal);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.Info2 {
+    background-color: var(--ColorPrincipal);
+    font-family: var(--FontPrincipal);
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.Cursos {
+    color: var(--ColorPrincipal);
+    font-family: var(--FontPrincipal);
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 22px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.logos {
+    text-align: center;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    font-weight: 400;
+}
+
+.Ciudades a {
+    background-color: var(--ColorPrincipal);
+    font-family: var(--FontPrincipal);
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.textosegundario {
+    font-weight: 800;
+    box-sizing: border-box;
+    font-size: 17px;
+    margin-bottom: 22px;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    background-color: #fff;
+}
+
+.button {
+    color: #fff;
+    background: var(--ColorPrincipal);
+    font-weight: 700;
+    font-family: var(--FontPrincipal);
+    font-size: 1rem;
+    text-decoration: none;
+    float: none;
+    padding: 20px 40px;
+    line-height: 1.5;
+    border-radius: 96px;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center !important;
+    box-sizing: border-box;
+
+}
+
+.para {
+    font-weight: 800;
+    box-sizing: border-box;
+    color: var(--ColorPrincipal);
+    font-size: 17px;
+    margin-bottom: 22px;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    line-height: 1.2;
+    text-align: left;
+    background-color: #fff;
+}
+
+.boldbody {
+    font-weight: 800;
+    box-sizing: border-box;
+    font-size: 27;
+    margin-bottom: 22px;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    line-height: 1.2;
+    color: inherit;
+    background-color: #fff;
+    margin-top: 0;
+    box-sizing: border-box;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.bodyslim {
+    font-weight: 800;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: bottom 25px;
+    color: var(--ColorSecundario);
+    text-align: left;
+    background-color: #fff;
+}
+
+.greenlink {
+    color: var(--ColorPrincipal);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    display: block;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.contenedor.displayinline div {
+    display: inline;
+}
