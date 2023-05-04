@@ -8,7 +8,7 @@
 }
 
 
-htlm {
+html {
     font-size: 62.5%;
 }
 
@@ -17,11 +17,109 @@ body {
     font-family: var(--FontPrincipal);
 }
 
-/* esto hace que la relacion entre rem y px sea de 1REM=10px*/
+/* 
+ .EjercicioFlex{
+    background-color: red;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between; 
+    flex:50%;
+    max-width:50%;
+
+}
+.EjercicioFlex a{
+    color:white;
+}
+esto hace que la relacion entre rem y px sea de 1REM=10px  */
 
 .contenedor {
-    width: 1140px;
+    width: 85%;
     margin: 0 auto;
+}
+
+.Login {
+    display: flex;
+    justify-content: right;
+    padding-top: 15px;
+    padding-bottom: 24px;
+}
+
+.Login a {
+    color: var(--ColorPrincipal);
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: transparent;
+    font-family: var(--FontPrincipal);
+}
+
+.Login a:hover {
+    text-decoration: underline;
+}
+
+.Separador {
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.MenuPrincipal {
+    display: flex;
+
+}
+
+.MenuImagen {
+    display: flex;
+    flex: 34%;
+    max: width 34%;
+    justify-content: flex-start;
+}
+
+.MenuEnlace {
+    display: flex;
+    flex: 66%;
+    max: width 66;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.MenuEnlace a {
+    margin-left: 25px;
+    font: size 14px;
+    font-weight: 700;
+    color: var(--ColorPrincipal)
+}
+
+
+.Info1 {
+    color: var(--ColorSecundario);
+    font-family: var(--FontPrincipal);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.Info1:hover {
+    text-decoration: underline;
+
+}
+
+.Info2 {
+    background-color: var(--ColorPrincipal);
+    font-family: var(--FontPrincipal);
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.Info2:hover {
+    background-color: #17a2b8;
+    color: white;
+
 }
 
 .location {
@@ -35,13 +133,17 @@ body {
     display: inline;
 }
 
-.Descubre {
+.Titulo {
     /* background-color:white ; */
     padding-top: 80px;
     margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex: 66%;
+    max-width: 66%;
 }
 
-.Descubre strong {
+.Titulo strong {
     background-color: #fff;
     color: var(--ColorSecundario);
     display: block;
@@ -51,16 +153,16 @@ body {
     margin-bottom: 10px;
     border-radius: 10px;
     padding: 0.3rem 1.5rem 0.3rem 1.5rem;
-
-
+    max-width: fit-content;
 }
 
-.PrimeraSeccion a:hover{
-    background-color:white ;
-    color:var(--ColorSecundario)
+.PrimeraSeccion a:hover {
+    /* a:hover da aggiungere sui bottoni xke cambi di colore qnd ci passi sopra*/
+    background-color: white;
+    color: var(--ColorSecundario)
 }
 
-.PrimeraSeccion a{
+.PrimeraSeccion a {
     background-color: var(--ColorSecundario);
     color: #fff;
     padding: 2.4rem 9.4rem;
@@ -68,66 +170,84 @@ body {
     text-transform: uppercase;
     font-weight: 700px;
     font-size: 1.4rem;
-    bordern:2px solid var(--ColorSecundario)
-
+    border: 2px solid var(--ColorSecundario)
 }
 
 .banner {
     background-image: url(../Img/11641891319_banner_zona_norte.png);
+    background-position: top left;
+    background-color: #e9ecef;
+    background-size: cover;
     padding-right: 0;
     padding-left: 0;
-    border-radius: 0;
-    background-position: top left;
-    background-size: cover; 
     padding-top: 80px;
     padding-bottom: 180px;
-    margin-bottom: 2rem;
-    background-color: #e9ecef;
-    box-sizing: border-box;
     display: block;
 }
 
-.BottoneIscrivi div {
+.BottoneIscrivi {
     color: var(--ColorSecundario);
     border: 2px solid var(--ColorSecundario);
     padding: 20px 44px;
     bottom: 50px;
-    background: #fff;
     color: #02052F;
     border-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px;
+
 }
 
-.BottoneIscrivi div {
+.BottoneIscriviM {
     background-image: url(../Img/Curso-marketing-digital-norte.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     border-radius: 10px;
-    min-height:300px;
+    min-height: 300px;
     margin-bottom: 30px;
     padding: 40px 60px;
-    margin-top:30px;
-}
-.BottoneIscrivi a{
-    background-color: ;
+    margin-top: 30px;
+
 }
 
-.Programacion {
+.BottoneIscriviP {
     background-image: url(../Img/Curso-programacion-web-full-stack-norte.png);
     background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 10px;
+    min-height: 300px;
+    margin-bottom: 30px;
+    padding: 40px 60px;
+    margin-top: 30px;
+
+}
+
+.BottoneIscrivi a {
+    background-color: white;
     min-height: 300px;
     text-align: right;
     background-size: auto;
     border-radius: 10px;
     background-position: right;
     margin-bottom: 30px;
-    padding: 40px 60px;
+    padding: 20px 44px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--ColorSecundario);
     text-align: left;
+    text-decoration: none;
     line-height: 1.5;
+    position: bottom;
+    bottom: 50px;
 }
 
+.BottoneIscrivi a:hover {
+    background: var(--ColorPrincipal);
+    border-color: var(--ColorSecundario);
+    color: #02052F;
+    border-color: #fff;
+}
 
 .cta {
 
@@ -142,44 +262,13 @@ body {
     background: var(--ColorSecundario);
     border-radius: 10px;
     padding: 20px 44px;
-    position: absolute;
     bottom: 50px;
 }
 
 h1 {
-    text-align: center;
     font-size: 45px;
-    padding: 50px;
-    margin: 50px;
 }
 
-.Login a {
-    color: var(--ColorPrincipal);
-    text-decoration: none;
-    background-color: transparent;
-    font-size: rem;
-    font-family: var(--FontPrincipal);
-}
-
-.Info1 {
-    color: var(--ColorSecundario);
-    font-family: var(--FontPrincipal);
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-.Info2 {
-    background-color: var(--ColorPrincipal);
-    font-family: var(--FontPrincipal);
-    font-size: 14px;
-    font-weight: 700;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    text-decoration: none;
-}
 
 .Cursos {
     color: var(--ColorPrincipal);
@@ -192,12 +281,33 @@ h1 {
 }
 
 .logos {
-    text-align: center;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    display: flex;
+    justify-content: center;
+    padding: 3px 15px;
+    margin: -90px 0px 0px 0px;
+    background-color: #fff;
+    box-sizing: border-box;
     font-weight: 400;
+    border-radius: 12px;
+
 }
+
+.LogosAdecco {
+    display: flex;
+    justify-content: center;
+    flex: 30%;
+    max-width: 30%;
+    align-items: center;
+}
+
+.Logosoficiales {
+    display: flex;
+    justify-content: center;
+    flex: 70%;
+    max-width: 70%;
+    align-items: center;
+}
+
 
 .Ciudades a {
     background-color: var(--ColorPrincipal);
@@ -208,6 +318,7 @@ h1 {
     padding: 0.6rem 1.2rem;
     border-radius: 20px;
     text-decoration: none;
+    align-items: center;
     text-align: center;
 
 }
@@ -297,6 +408,22 @@ h1 {
     background-color: transparent;
 }
 
-.contenedor.displayinline div {
-    display: inline;
+/* this stuff are limitations to modify a page for different measures 
+@media(min-width:480px){
+    body{
+        background-color: blue;
+    }
 }
+@media(min-width:750px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+@media(min-width:900px) {
+    body {
+        background-color: red;
+    }
+}
+para pc =1140px tablet=768px movil=480px */
+

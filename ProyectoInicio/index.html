@@ -31,32 +31,40 @@
 
 
 <body>
+    <!-- <div class="EjercicioFlex">
+        <a href="#">ENLACE 1</a>
+        <a href="#"> ENLACE2 </a>
+        <a href="#"> ENLACE3 </a>
+    </div> -->
+
     <header class="Login">
-        <a href="#"> Login Alumnos</a>
+        <a href="#"> Login Alumnos </a>
+        <a class="Separador">|</a>
         <!-- entre a y href se podria poner lo de class="" pero se tiene que aplicar a todos los elementos,
             si lo pones en el header lo aplicas a todos los hijos-->
         <a href="#">Login Empresas</a>
     </header>
 
-    <nav>
-
-        <a href="#">
-            <img alt="cursos digitales" src="Img/Tu-carrera-digital-general.png">
-        </a>
-        <a class="Info1" href="#">CURSOS</a>
-        <a class="Info1" href="#"> SOBRE NOSOTROS</a>
-        <a class="Info2" href="#">INFORMATE
-
-        </a>
+    <nav class="MenuPrincipal">
+        <div Class="MenuImagen">
+            <a href="#">
+                <img alt="cursos digitales" src="Img/Tu-carrera-digital-general.png">
+            </a>
+        </div>
+        <div class="MenuEnlaces">
+            <a class="Info1" href="#">CURSOS</a>
+            <a class="Info1" href="#"> SOBRE NOSOTROS</a>
+            <a class="Info2" href="#">INFORMATE</a>
+        </div>
     </nav>
 
     <section class="banner PrimeraSeccion">
         <div class="contenedor">
 
-            <h1 class="Descubre">
+            <h1 class="Titulo">
                 <strong>Descubre nuestros</strong>
                 <strong> cursos gratuitos y </strong>
-                <strong>formate en las disciplinas </strong>
+                <strong> formate en las disciplinas </strong>
                 <strong> mas demandadas</strong>
                 <strong> del mercado </strong>
             </h1>
@@ -67,9 +75,17 @@
     </section>
 
     <section>
-        <div class="contenedor logos">
-            <img src="Img/Logos-oficiales.png">
-            <img src="Img/Logo-Adecco.png">
+        <div class="contenedor">
+            <div class="logos">
+                <div class="Logosoficiales">
+                    <img src="Img/Logos-oficiales.png">
+                </div>
+
+                <div class="LogosAdecco">
+                    <img src="Img/Logo-Adecco.png">
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -96,17 +112,17 @@
         </div>
     </section>
     </section>
-    
+
     <section class="BottoneIscrivi contenedor">
-        <div>
+        <div class="BottoneIscriviM">
             <h2>MARKETING DIGITAL</h2>
-            <a class="Marketing" href="/zona-norte/curso-marketing-digital#cursos"> INSCRIBEME
+            <a href="/zona-norte/curso-marketing-digital#cursos"> INSCRIBEME
             </a>
         </div>
-        <div class="Programacion">
+
+        <div class="BottoneIscriviP">
             <h2> PROGRAMACION WEB FULLSTACK</h2>
             <a href="/zona-norte/cursos-programcion-web-full-stack#cursos">INSCRIBEME
-                <img src="Img/Curso-programacion-web-full-stack-norte.png">
             </a>
         </div>
     </section>
