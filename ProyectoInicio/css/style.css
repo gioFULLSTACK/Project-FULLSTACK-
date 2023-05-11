@@ -142,7 +142,18 @@ esto hace que la relacion entre rem y px sea de 1REM=10px  */
 }
 
 
+@media(max-width:1140px){
+    .MenuEnlaces{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        max-width:100%;
+        justify-content:flex-end;
+    }
+    .MenuImagen{
+        max-width:100%;
 
+    }
+}
 @media(max-width:768px) {
     .MenuImagen {
         flex: 100%;
@@ -164,9 +175,16 @@ esto hace que la relacion entre rem y px sea de 1REM=10px  */
 
     .MenuEnlaces a {
         margin: 0px 0px 0px 0px;
-        border-top: 1px solid var(--ColorSecundario);
+        /* border-top: 1px solid var(--ColorSecundario); */
         padding: 10px 0px;
         /* display:block; */
+    }
+    .MenuEnlaces{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width:100%;
+        margin-top:20px;
+        align-items: self-start ;
 
     }
 }
