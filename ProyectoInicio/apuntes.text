@@ -1,0 +1,303 @@
+                                            _JAVASCRIPT_
+    añade interactividad a tus sitios web
+    javascript es un lenguaje de programacion porque tiene: variables,funciones, estructura de control,metodos.
+    se utiliza para desarollo Frontend e Backend y aplicaciones, movil y escritorio
+    corre de la parte del DOM (etichetas y codigo de eticheta de HTML) la relacion que hay entre todo lo de HTML (head,footer,body etc.)
+    al final del body poner alerta : alert(Hola Mundo)
+
+variables
+    como definir variables?
+    3 formas: var , let, const (ultimas dos son formas actuales de hacerlo mientras var desfasada)
+    var elementos variables, const elementos constantes
+
+eg. let (palabra reservada ) producto (nombre de variable) ="valor" (valor de la variable)
+ la variable no recibe informacion del tipo de dato si no que lo recibe el valor 
+ eg. let (number) = syting
+
+ el nombre de las variables NO PUEDEN INICIAR :
+ -con numeros
+ -caracteres especiales
+
+ESTILOS PARA CREAR variables
+ let nombre_producto= "A" underscore
+ let nombreProducto ="A" camelcase, el mas usado (inicio minuscola e resto maiusc)
+ let NombreProducto =" A" pascalcase primera e segunda maiscula
+ let nombreproducto ="A" 
+ 
+EJEMPLO
+    var contador = 0;
+    if (contador<2){
+        var total=2;
+    }
+    console.log (total);//2
+
+TIPO DE DATO QUE TIENE LA VARIABLE --> typeof
+const numero100= "100";
+const numero200= 200;
+console.log ("numero100", typeof numero100);
+console.log ("numero200", typeof numero200); //siccome abbiamo messo il 200 fuori dalle virgolette nel const=200 esce come typo numero mentre l'altro esce come string
+
+
+TIPOS DE DATOS QUE RECIBE LA VARIABLE
+    -1string: 
+        -declaraciones, 
+        -metodos
+    -2number & 3booleans:
+        - let, var, const
+METODOS PARA LOS STRING:
+    -SON FUNCIONES QUE PUEDES UTILIZAR PARA VARIAR EN FUNCIONES POR TIPO DE DATO*/
+    -metodos son funciones que me dicen
+
+2NUMBER : 
+    - todos los numeros en javascript son tratados por igual da igual que sean enteros, decimalesm negativos,frcciones.
+OPERACIONES MATEMATICAS:
+-Suma +
+-Resta -
+-Multiplicacion *
+-Division /
+-Modulo % : esto es complicado, me da el valor del residuo de la division (sarebbe il numero di distanza da un numero per cui si puo dividere uno dei due numeri senza che il risultato sia decimale)
+METODOS PARA LOS NUMEROS (MATH)
+    EN CONSOLA PONER WINDOW Y BUSCAMOS MATH
+    TODAS ESAS FUNCIONES PERTENECEN AL METODO DE MATH ALGUNAS DE LAS MAS UTILIZADAS 
+    -Math.random(): esta operacion me da un resultado aleatorio entre 0-1
+    - Math.PI para mostrar el numero pi griego
+    -Math.round(2.5); para arrotondare a 3
+    -Math.ceil (2.1); redondea hacia arriba
+    -Math.floor (2.9); redondea hacia abajo
+    -Math.square (144); raiz cuadrada
+    -Math.pow(x,2); eleva al cuadrado x
+
+/METODOS PARA LOS NUMEROS (MATH)
+     let resultado=Math.random();
+     console.log ("Uso de metodo random:", resultado);
+
+
+/EJERCICIO 5-10 RANDOM 
+    let resultado1= Math.random()*5+5;
+    console.log("Resultado numero aleatorio entre 5 y 10", resultado1);
+    console.log("Resultado redondeado",Math.round(resultado1));
+
+//calcular area
+    let diameter=10 --> definimos el diametro
+    let Area=Math.PI*(Math.pow(diameter/2,2)); -> moltiplicamos el pi griego por la elevacion de diametro dividido x2 y elevado a dos
+    console.log("Area",Area);
+
+EJERCICIO
+    por ordern de prioridad 
+    () Parentesis
+    * Multiplicacion
+    + - suma y subtracion 
+
+
+//Ejercicio descuento
+
+    let prenda1= 25
+    let prenda2=10
+    let prenda3=15
+    let descuento=30
+    let carrito= prenda1+prenda2+prenda3
+    let ahorroTotal=(carrito *(descuento/100))
+
+    console.log("Ahorro Total:",carrito*(descuento/100));
+    console.log("Total:", carrito);
+    console.log("Precio Final",carrito-ahorroTotal);
+
+
+CONCATENACION
+    cuando usamos el signo "+" pero tenemos variables tipo string
+
+1TEMPLATE STRING O STRING LITERALS
+    HACE REFERENCAI A MEZCLAR TEXTO CON VARIABLES O FUNCIONES 
+    ES SUSTITUTO DE LAS SINTAXIS ANTERIOR    
+   
+   eg. console.log(`Nombre de usuario ${nombre} y su correo es ${email}`)
+   comillas invertidas `` para escribir el nombre
+   ${} para escribir variables
+
+3BOOLEANS
+    -solo trabajan 2 valores. 0 1
+
+MOSTRADORES DE PANTALLA 
+
+
+OBJETOS:
+    - es un contenedor de infomacion, esa info se le llama propriedad, cada prorpriedad tiene un valor
+    -como por ejemplo : producto. --> nombre categoria imagen precio disponibilidad talla (si es una prenda de ropa) la informacion que ingloba todo esto es producto
+dentro de las { } se inicializa con dos puntos: no igual=
+eg. const producto= {
+    nombreProducto:"Reloj",
+    precio:200,
+    disponibilidad:false
+                };
+caracteristica objectos: 
+    -empiezan y terminan con llaves,
+    -en su interior propriedad y valor
+
+para llamar una propriedad dentro de una variable "nombrevariable". propriedad --> producto.precio 
+
+operaciones:
+    -modificar --> producto.precio= 500;          //llamando la propriedad con la sintaxis de punto y actualizamos su valor 
+    -añadir--> producto.categoria="Relojes";      //si llamas una propriedad que no existe te la crea
+    -borrar --> delete producto.disponibilidad;   //delete y llamar la propriedad que existe 
+
+Destructuring:
+    -crear variables a partir de propriedades de un objeto --> const precioProducto= producto.precio;
+    - cuando creo una variable a partir de las propriedades no es una conversion ni se borra la propriedad son dos cosas distintas 
+        asi que cuando quieres modificar/añadir/borrar la propriedad la sigues tratando como propriedad y no variable.
+OBJECT FREEZE
+    - no podemos añadir , borrar, modificar propriedads
+
+!posible pregunta de entrevista!
+Para evitar que se puedan modificar Object.freeze()
+arriba de todo :
+    "use strict"; //para que corra javascript de modo estricto. si hay algun error que me muestre el error por pantalla
+como saber si un objeto es frozen o no
+    console.log("ESTA CONGELADO?", Object.isFrozen(playa));
+
+OBJECT SEAL --> Object.seal
+    -no podemos añadir o borrar propriedades
+    -si podemos modificar propriedades
+
+SPREAD OPERATOR --> ...
+    -queremos crear nueva variable tipo objeto 
+
+    ARRAYS --> 04.js
+    - contenedores de elementos
+    como se declaran arrays:
+    -uso palabra reservada (let, var, const) nombre =[]
+    -palabra reservada =new array (valores) menos utilizada 
+    -si quiero acceder a un elemento mediante los indices 0,1,2,3,4, etc.
+    -cca lenguajes de programacion empiezan muchos por 0 .
+    -como modificar,añadir, deletear una array
+    eg.
+            // COMO ELIMINAR/MODIFICAR Y AÑADIR ELEMENTOS A LOS ARRAYS
+
+             numeros[5] = 60;
+
+               // USADA, PUES DEBEMOS SABER LA EXTENSIÓN DEL ARREGLO
+
+                numeros[2] = 120;  // SI ESTE INDICE EXISTE, NOS MODIFICA EL VALOR
+
+     METODOS:
+    lenght: me da longitud de array          
+    push:numeros.push (10,30) añade al final del array 10 y 30
+    unshift: añde al principo
+    shift: elimina al principio
+    pop:elimina ultimo elemento de array
+    splice:elimina elementos de un array desde el indice que yo le indico (2,3);
+    include: arrays planos
+    some:arrays no planos
+    forEach: funcion qeu recorria todos los elementos de un array.
+
+    FUNCIONES
+FUNCIONES EN JAVASCRIPT
+    -serie de procedimiento  o instrucciones que relaizan una accion
+    -son reutilizables
+
+formas de crear funciones: linea 1. 05.js
+    -declarar de la funcion
+    -expresion de la funcion
+    -IIFE
+
+si quiero crear varibales usas: let var const
+si quieres crear funciones: function
+no numeros no characteres raros
+eg.linea2-6 function sumar (){} --> sumar es solo el nombre so es fijo 
+    function sumar (n2, n2){
+    //cuerpo funcion
+    console.log(n1+n2)
+    };
+    sumar(3,7);
+
+DIFERENCIA ENTRE METODO Y FUNCIONES
+    -metodos van precedidos de un punto
+    -un metodo no deja de ser una funcion pero es ya preestablecida
+    - funcion van seguidos por parentesis 
+    -FUNCTION() e .METODOS 
+    eg.linea43-48: 
+        //ejercicio 
+                    const numero1=20;
+                    const numero2="20";
+
+                    console.log(parseInt(numero2)); //parseInt es una FUNCION
+                    console.log(numero1.toString()); //toString() es un METODO
+            asi hemos cambiado el tipo numero a tipo string y el tipo string a tipo numero.
+
+hay funciones que retornan valores :
+    function sumar(a,b){
+        return (a+b);
+    }
+let resultado = sumar (3,8); --> aqui llamaos una variable qeu estamos incializando aqui mismo 
+console.log(resultado);
+
+
+
+>=mayor igual que
+<=menor igual que
+=== igual que
+!== distinto que
+
+
+METODOS DE PROPRIEDAD
+eg.
+        producto={-->ya solo con esto se deberia saber que lo del interior es un objeto
+            nombre:"juan",
+            precio:16,
+            disponible:true,
+        }
+
+_ARROW FUNCTION_
+expresion funcion--> let sumar= function(n1) 
+                        {
+                            console.log(n1+8)
+                        }
+para hacerlo arrow function se quita la palabra "function" y se añade al final de la parentesis =>
+cuadno solo hay una linea tipo en este caso (la parte nelle graffe), se pueden quitar las {}. si hay mas lineas no se pueden quitar
+y cuando solo hay un argumento se pueden quitar las (),si esta vacio, hay mas de un argumento o inicializado no se pueden quitar las parentesis!
+queda asi la funcion flecha: 
+                let sumar= n1=> console.log(n1+8)
+
+
+CONTROLES DE FLUJO
+let contador=10;
+if () sigue siendo una funcion;
+if(contador>0){
+    console.logU(contador)
+}
+else if --> si contador no entraba en la primera ejecutaba el codigo despues de else if
+{else if (contador===0)}
+console.log();
+
+{else}
+
+swtich-->evaluava differentes casos
+switch(contador){
+    case0: cuerpo funcion; si caso 0 es igual a 0 me ejecuta este codigo (el del cuerpo de la funcion)
+    break;
+    caso 1: si el caso  es igual a 1 ejecuata ese codigo
+    break;
+    default: ;
+    break;
+}
+
+//ESTRUCTURAS DE CONTROLO TIPO BUCKLE:
+- for, 
+-while,
+-do while, 
+-for each,
+-map (for each y map son metodos para arrays)
+                                        //FOR
+// for(argumento){
+//     cuerpo 
+// }
+    //  for (let i=0; i<10;    i++){}
+//plbr res indice/condicion/actualizador
+//entra en el buckle variable valorada en 0, es i menor que 10? si porque es 0, 
+//asi que i++ y i pasa a valer 1, y en buckle de nuevo i<10? si 
+//entonces se pasa a i++ y vale 2
+//realiza una funcion en buckle 
+
+
+FOR EACH AND MAP 
+//map se suele utilizar para crear arrays a partir de la lectura de otros arrays
+//for each para leer o mostrar por consola informacion de array 
