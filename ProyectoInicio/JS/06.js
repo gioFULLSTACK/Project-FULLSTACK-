@@ -156,11 +156,12 @@ switch (numero2) {
 //     cuerpo 
 // }
     //  for (let i=0; i<10;    i++){}
-//plbr res indice/condicion/actualizador
+                                                //plbr res indice/condicion/actualizador
 //entra en el buckle variable valorada en 0, es i menor que 10? si porque es 0, 
 //asi que i++ y i pasa a valer 1, y en buckle de nuevo i<10? si 
 //entonces se pasa a i++ y vale 2
 //realiza una funcion en buckle 
+
 console.log(1);
 console.log(2);
 console.log(3);
@@ -254,12 +255,13 @@ console.log(arrayMap);
 
 //mostrar propriedad --> precio del carrito en while, for y do while
 //FOR
+console.log("Ej. con FOR",carrito[i]);
 for (let i = 0; i < carrito.length; i++) {
     console.log(carrito[i]);
-    console.log("Ej. con FOR",carrito[i].precio);
+    
 }
 //WHILE
-let c = 0;
+let c = 0; //--> para que empieze en el indice 0 osea el primer numero
 while (c < carrito.length) {
   console.log("Ej. con WHILE",carrito[c].precio);
   c++;
@@ -273,3 +275,4 @@ do {
   c1++;
 } while (c1 < carrito.length);
 
+//
