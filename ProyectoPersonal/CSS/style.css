@@ -62,93 +62,12 @@ body {
   background-position:center;
 
 }
-/* esto lo añadi para hacer el popup */
-.button {
-  font-size: 1em;
-
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-  font-family: inherit;
-  font-weight: bold;
-  color: var(--white-1);
-
-  letter-spacing: 2px;
-
-  padding: 9px 20px;
-  border: 1px solid var(--grey);
-  border-radius: 1000px;
-  background: transparent;
-  transition: .3s;
-
-  cursor: pointer;
-}
 
 
-.button:hover,
-.button:focus {
-  color: var(--primary);
-  background: hsla(var(--hue), 25%, 10%, .2);
-  background-color:white;
-  border-color: currentColor;
-}
-
-.button:active {
-  transform: translate(2px);
-}
 
 
-/* states */
-.button:hover+.design-container,
-.button:active+.design-container,
-.button:focus+.design-container {
-  --tr: 20;
-  --op: .7;
-}
 
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* background: rgba(0, 0, 0, 0.7); */
-  background-image: url(https://wallpapercave.com/wp/wp2225924.jpg);
-  width: 100%;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 1;
-}
 
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #080808;
-  border-radius: 5px;
-  width: 40%;
-  height: 78%;
-  position: relative;
-  transition: all 2s ease-in-out;
-}
-.popup .cerrarpopup {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #b9b7b7;
-}
-
-.popup .cerrarpopup:hover {
-  color: #3a1ea0;
-}
-/* fin popup trial */
 
 .grid-divide div{
 /*  
@@ -303,39 +222,42 @@ figcaption {
 
 
 /* button */
-button {
+.button {
   font-family: inherit;
   font-weight: bold;
   color: var(--white-1);
-
   letter-spacing: 2px;
-
   padding: 9px 20px;
   border: 1px solid var(--grey);
   border-radius: 1000px;
   background: transparent;
   transition: .3s;
-
   cursor: pointer;
+  /* parte añadida de paula */
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 
-button:hover,
-button:focus {
+
+
+.button:hover,
+.button:focus {
   color: var(--primary);
   background: hsla(var(--hue), 25%, 10%, .2);
   background-color:white;
   border-color: currentColor;
 }
 
-button:active {
+.button:active {
   transform: translate(2px);
 }
 
 
 /* states */
-button:hover+.design-container,
-button:active+.design-container,
-button:focus+.design-container {
+.button:hover+.design-container,
+.button:active+.design-container,
+.button:focus+.design-container {
   --tr: 20;
   --op: .7;
 }
@@ -343,3 +265,158 @@ button:focus+.design-container {
 
 
 
+
+/* PARTE MODAL PARA QUE AL HACER CLICK SALGA EL POPUP??? */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  
+}
+/*  END PARTE MODAL PARA QUE AL HACER CLICK SALGA EL POPUP??? */
+
+
+/* INIZIO PROVA POPUP NUOVO */
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #080808;
+  border-radius: 5px;
+  width: 40%;
+  height: 78%;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+/* Boton para cerar el popup */
+.popup .cerrarpopup {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #b9b7b7;
+  z-index: 5;
+}
+
+.popup .cerrarpopup:hover {
+  color: #3a1ea0;
+}
+
+.popup h2{
+  color: white;
+}
+
+.popup h3{
+  color:white;
+}
+/* FINE PROVA POPUP NUOVO */
+
+/* Etiquetas del juego */
+.etiquetaspopup {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  color: white;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+  padding-top: 17px;
+}
+
+.etiquetaspopup a {
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #2e2d2f;
+  color: white;
+  display: inline-block;
+  margin: 2px;
+
+}
+
+.etiquetaspopup a:hover {
+  border-radius: 10px solid white;
+  background-color: #686769;
+  color: #1d1d1e;
+}
+/* Grid principal que separa las partes del popup */
+.gridpopup {
+  display: grid;
+  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-rows: 55% 30% 20%;
+  
+}
+/* VIDEO del juego */
+.videopopup {
+
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.videopopup iframe {
+  width: 100%;
+
+}
+
+/* De que va el juego / RESUMEN */
+.contenidopopup {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 10px 10px;
+ 
+}
+
+.contenidopopup p{
+  color: white;
+  justify-content: center;
+}
+
+/* PEGI */
+
+/* Boton que lleva a la pagina del Pegi */
+.pegiboton {
+  text-decoration: none;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin: auto;
+  border: solid 2px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.pegiboton .pegipopup {
+  display: grid;
+  grid-template-columns: 160px 160px;
+  grid-template-rows: 1fr 1fr;
+  background-color: transparent;
+
+}
+
+/* Información sobre cada juego de Pegi */
+.pegipopup h4 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: white;
+
+}
+
+.pegipopup h5 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color: white;
+}
+
+.pegi18 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/PEGI_18.svg/640px-PEGI_18.svg.png);
+  max-width: 100px;
+  max-height: 100px;
+  margin: auto;
+}

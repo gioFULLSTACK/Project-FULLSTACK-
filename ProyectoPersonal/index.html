@@ -10,6 +10,8 @@
   <link href="CSS/normalize.css" rel="stylesheet">
 
   <link rel="stylesheet" href="CSS/style.css" />
+
+
   <title>Parte descuentos</title>
 </head>
 
@@ -33,11 +35,8 @@
         <div class="card-front">
           <figure>
             <div class="img-bg cyberpunkleft"></div>
-            <!-- <img src="img/cyberpunk.jpg" alt="Cyberpunk"> -->
             <figcaption>Cyberpunk</figcaption>
           </figure>
-
-
         </div>
 
         <div class="card-back">
@@ -45,26 +44,18 @@
             <div class="img-bg"></div>
             <img src="img/cyberpunkback.jpg" alt="Cyberpunkback">
           </figure>
-          <!-- <button>Ver Descuento</button> -->
-          <!-- inzio cambio -->
-          <a class="button" href="#popup1">Ver Descuentos</a>
-          
-          <!-- fine cambio -->
+
+          <a class="button" id="abrirCyberpunk">Ver Descuentos </a>
         </div>
 
       </div>
-    </div>
-    <!-- cambiup -->
-    <div id="popup1" class="overlay">
-      <div class="popup">
-        <a class="cerrarpopup" href="#">&times;</a>
-      </div>
+
     </div>
     <!-- CYBERPUNK END-->
 
     <!-- grid divide for three singles-->
     <div class="grid-divide">
-      <!-- LAST OF US START-->
+      <!-- LAST OF US START -->
       <div class="flip-card-container" style="--hue: 170">
         <div class="flip-card">
 
@@ -82,15 +73,14 @@
               <img src="img/thelastofusback.jpg" alt="thelastofusback">
             </figure>
 
-            <button>Ver Descuento</button>
-
+            <a class="button" id="abrirTLOU">Ver Descuentos </a>
           </div>
 
         </div>
       </div>
-      <!-- LAST OF US END-->
+      <!-- LAST OF US END -->
 
-      <!-- STREET FIGHTER START-->
+      <!-- STREET FIGHTER START -->
       <div class="flip-card-container" style="--hue: 350">
         <div class="flip-card">
 
@@ -101,7 +91,6 @@
               <figcaption>Street Fighter 5</figcaption>
             </figure>
 
-
           </div>
 
           <div class="card-back">
@@ -111,16 +100,14 @@
               <img src="img/streetfighter.jpg" alt="Street Fighter 5">
             </figure>
 
-            <button>Ver Descuento</button>
-
-
+            <a class="button" id="abrirStreetF">Ver Descuentos </a>
           </div>
 
         </div>
       </div>
-      <!-- STREET FIGHTER END-->
+      <!-- STREET FIGHTER END -->
 
-      <!-- EHKARIM START-->
+      <!-- EHKARIM START -->
       <div class="skyrim">
         <div class="flip-card-container " style="--hue: 350">
           <div class="flip-card">
@@ -132,7 +119,6 @@
                 <figcaption>Skyrim </figcaption>
               </figure>
 
-
             </div>
 
             <div class="card-back">
@@ -142,21 +128,121 @@
                 <img src="img/skyrimback.jpg" alt="Skyrim">
               </figure>
 
-              <button>Ver Descuento</button>
-
+              <a class="button" id="abrirSkyrim">Ver Descuentos </a>
 
             </div>
-          </div>
 
+          </div>
 
         </div>
 
       </div>
 
-
     </div>
-    <!-- <button>Ver Mas</button>  -->
+
+    <button>Ver Mas</button>
+
   </section>
+  <!-- SECCION POPUP -->
+
+  <!-- CYBERPUNK  -->
+  <div id="popupCyberpunk" class="modal">
+
+    <div class="popup">
+      <h2>Cyberpunk </h2>
+
+      <div class="gridpopup">
+
+        <div class="videopopup">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VhM3NRu23Sk" title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="contenidopopup">
+          <p>
+            Cyberpunk 2077 es un RPG de aventura
+            y acción de mundo abierto ambientado en
+            el futuro sombrío de Night City, una peligrosa
+            megalópolis obsesionada con el poder, el glamur y
+            las incesantes modificaciones corporales
+          </p>
+
+        </div>
+
+        <a href="https://www.globalratings.com/ratingsguide.aspx#pegi" target="_blank" class="pegiboton">
+
+          <div class="pegipopup">
+            <h4>pegi 18</h4>
+            <h5>vioñencia</h5>
+            <img class="pegi18">
+          </div>
+
+        </a>
+
+        <div class="infoadicionalpopup">
+          <div class="fechapopup">
+            <h4>Fecha de lazamiento:</h4>
+            <h4></h4>
+
+          </div>
+          <div>
+
+            <div class="etiquetaspopup">
+              <a href="">Ciberpunk</a>
+              <a href="">Mundo Abierto</a>
+              <a href="">Rol</a>
+              <a href="">Un Jugador</a>
+              <a href="">+</a>
+            </div>
+          </div>
+          <a class="cerrarpopup" href="">&times;</a>
+        </div>
+        <img id="" class="">
+
+      </div>
+      <!-- END CYBERPUNK  -->
+
+      <!-- THE LAST OF US  -->
+      <div id="popupTLOU" class="modal">
+
+        <div class="popup">
+          <h2>The Last Of Us </h2>
+          <a class="cerrarpopup" href="">&times;</a>
+        </div>
+        <img id="" class="">
+
+      </div>
+      <!-- END THE LAST OF US  -->
+
+      <!-- STREET FIGHTER V  -->
+      <div id="popupStreetF" class="modal">
+
+        <div class="popup">
+          <h2>Street Fighter V </h2>
+          <a class="cerrarpopup" href="">&times;</a>
+        </div>
+        <img id="" class="">
+
+      </div>
+      <!-- END STREET FIGHTER V  -->
+
+
+      <!-- SKYRIM  -->
+      <div id="popupSkyrim" class="modal">
+
+        <div class="popup">
+          <h2>Skyrim </h2>
+          <a class="cerrarpopup" href="">&times;</a>
+        </div>
+        <img id="" class="">
+
+      </div>
+      <!-- END SKYRIM -->
+
+
+      <!-- FINE SECCION POPUP -->
+
+      <script src="JS/01.js"></script>
 
 </body>
 
