@@ -24,15 +24,15 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   /* align-items: center; */
-
+  color: white;
   background: hsl(220, 10%, 12%);
   font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.descuentosTitle{
-  color:white;
+.descuentosTitle {
+  color: white;
   font-family: 'Times New Roman', Times, serif;
-  text-transform:capitalize;
+  text-transform: capitalize;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -52,35 +52,36 @@ body {
   grid-row: span 3;
 }
 
-.cyberpunk{
-  grid-row:1/4;
-}
-.cyberpunkleft{
-  background-image:url(../img/cyberpunk.jpg);
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:center;
-
+.cyberpunk {
+  grid-row: 1/4;
 }
 
+.cyberpunkleft {
+  background-image: url(../img/cyberpunk.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
 
 
 
 
 
 
-.grid-divide div{
-/*  
+
+.grid-divide div {
+  /*  
  grid-template-rows:350px 350px 350px; */
- max-height:150px;
- /* padding:0px; */
- /* margin-block: 20px; */
+  max-height: 150px;
+  /* padding:0px; */
+  /* margin-block: 20px; */
 }
 
-.grid-divide img{
- width:auto;
- height:auto;
- 
+.grid-divide img {
+  width: auto;
+  height: auto;
+
 }
 
 
@@ -124,7 +125,7 @@ body {
   border-radius: 24px;
   background: var(--dark);
   position: absolute;
- 
+
   top: 0;
   left: 0;
   overflow: hidden;
@@ -156,24 +157,25 @@ figure {
 /* figure, .img-bg */
 figure,
 .img-bg {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover; /* Added this line */
+  background-size: cover;
+  /* Added this line */
 }
 
-.cyberpunk div{
+.cyberpunk div {
   height: 530px;
-  width:500px
+  width: 500px
 }
 
 /* img */
 img {
   height: 100%;
   border-radius: 24px;
-  max-width:fit-content;
+  max-width: fit-content;
 }
 
 /* figcaption */
@@ -197,6 +199,7 @@ figcaption {
   color: var(--white-1);
   background: hsla(var(--hue), 25%, 10%, .5);
 }
+.figcaption 
 
 .img-bg .img-bg {
   background: hsla(var(--hue), 25%, 10%, .5);
@@ -245,7 +248,7 @@ figcaption {
 .button:focus {
   color: var(--primary);
   background: hsla(var(--hue), 25%, 10%, .2);
-  background-color:white;
+  background-color: white;
   border-color: currentColor;
 }
 
@@ -277,8 +280,9 @@ figcaption {
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
   overflow: hidden;
-  
+
 }
+
 /*  END PARTE MODAL PARA QUE AL HACER CLICK SALGA EL POPUP??? */
 
 
@@ -293,6 +297,7 @@ figcaption {
   position: relative;
   transition: all 2s ease-in-out;
 }
+
 /* Boton para cerar el popup */
 .popup .cerrarpopup {
   position: absolute;
@@ -310,21 +315,22 @@ figcaption {
   color: #3a1ea0;
 }
 
-.popup h2{
+.popup h2 {
   color: white;
 }
 
-.popup h3{
-  color:white;
+.popup h3 {
+  color: white;
 }
+
 /* FINE PROVA POPUP NUOVO */
 
 /* Etiquetas del juego */
 .etiquetaspopup {
-  /* grid-column: 1/2;
-  grid-row: 2/3; */
-  display:flex;
-  
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+
   color: white;
   border-bottom: solid 2px rgba(255, 255, 255, 0.1);
   padding-top: 17px;
@@ -346,14 +352,32 @@ figcaption {
   background-color: #686769;
   color: #1d1d1e;
 }
+
 /* Grid principal que separa las partes del popup */
 .gridpopup {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* display: grid;
   grid-template-columns: 5% 45% 45% 5%;
-  grid-template-rows: 55% 30% 20%;
-  
+  grid-template-rows: 55% 30% 20%; */
+
 }
-/* VIDEO del juego */
+
+.prices {
+  display: grid;
+  grid-row: 1;
+  grid-column: 3;
+  justify-content: center;
+  justify-items: center;
+}
+.prices p{
+  margin-top:80px;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* VIDEO del juego
 .videopopup {
 
   grid-column: 2/4;
@@ -363,23 +387,114 @@ figcaption {
 .videopopup iframe {
   width: 100%;
 
-}
+} */
 
 /* De que va el juego / RESUMEN */
 .contenidopopup {
-  grid-column: 2/3;
-  grid-row: 2/3;
+  grid-column: 1fr;
+  grid-row: 3/4;
   max-height: 100%;
   max-width: 100%;
   margin: 10px 10px;
- 
+
+
 }
 
-.contenidopopup p{
+.contenidopopup p {
+
   color: white;
-  justify-content: center;
- 
-  margin-top:10px;
+  margin-top: 10px;
+}
+
+/* Logos de las tiendas */
+
+/* ATTEMPT 2 */
+.icon-bright {
+  filter: brightness(100%);
+}
+
+.icon-dim {
+  filter: brightness(0.7);
+}
+
+
+.logospopup {
+  grid-column: 1fr;
+  grid-row:2/3;
+  align-items:center;
+  /* margin-right:100px; */
+  /* margin-left:50px; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+
+  height: 100%;
+}
+
+.steam {
+  grid-column: 1/2;
+  grid-row: 1fr;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/c/c1/Steam_Logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.epic {
+  grid-column: 2/3;
+  grid-row: 1/1;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/Epic_Games_logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* .epicn{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  max-width: 50px;
+  max-height: 50px;
+  margin: auto;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/Epic_Games_logo.png);
+  /* filter: brightness(0.1); */
+
+
+.gog {
+  grid-column: 3/4;
+  grid-row: 1fr;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/GOG.com_logo.svg/1669px-GOG.com_logo.svg.png);
+  filter: brightness(7);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* .gogno{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  max-width: 50px;
+  max-height: 50px;
+  margin: auto;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/GOG.com_logo.svg/1669px-GOG.com_logo.svg.png);
+  filter: brightness(0.7);
+} */
+
+.eagames {
+  grid-column: 4/5;
+  grid-row: 1fr;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/2048px-Electronic-Arts-Logo.svg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 /* PEGI */
