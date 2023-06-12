@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: Arial, sans-serif;
   /* background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat; */
@@ -750,4 +751,758 @@ button {
 
 
 
+=======
+body {
+  font-family: Arial, sans-serif;
+  /* background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat; */
+  /* background-size: cover;
+  height: 100vh; */
+}
+
+
+/* BOTON QUE PERMITE ABRIR EL POPUP */
+
+.button {
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+
+/* EL PROPIO POPUP 
+EL ESTILO QUE TIENE Y EL BOTON PARA CERARLO */
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #080808;
+  border-radius: 5px;
+  width: 40%;
+  height: 78%;
+  position: relative;
+  transition: all 2s ease-in-out;
+  z-index: 2;
+  
+}
+
+/* Boton para cerar el popup */
+.popup .cerrarpopup {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #b9b7b7;
+  z-index: 5;
+}
+
+.popup .cerrarpopup:hover {
+  color: #3a1ea0;
+}
+
+
+
+
+
+
+/* OVERLAYS - CADA CARTA DE JUEGO
+CADA OVERLAY ES DIFERENTE Y TIENE UNA IMAGEN DE FONDO DIFERENTE */
+
+/* Primer juego */
+/* .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(https://wallpapercave.com/wp/wp2225924.jpg);
+  width: 100%;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+} */
+
+/* Segundo juego */
+/* .overlay2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(https://i.bo3.no/image/343799/FABLE-4.jpg?c=0&h=900&w=1600);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+
+}
+
+.overlay2:target {
+  visibility: visible;
+  opacity: 1;
+} */
+
+
+/* DENTRO DEL POPUP */
+
+/* Titulo del juego */
+.popup h2 {
+  margin-top: 0;
+  color: #ffffff;
+  font-family: Tahoma, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  
+}
+
+/* Grid principal que separa las partes del popup */
+.gridpopup {
+  display: grid;
+  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-rows: 55% 30% 20%;
+  
+}
+
+/* VIDEO del juego */
+.videopopup {
+
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.videopopup iframe {
+  width: 100%;
+
+}
+
+/* De que va el juego / RESUMEN */
+.contenidopopup {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 10px 10px;
+ 
+}
+
+.contenidopopup p{
+  color: white;
+  justify-content: center;
+}
+
+
+/* PEGI */
+
+/* Boton que lleva a la pagina del Pegi */
+.pegiboton {
+  text-decoration: none;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin: auto;
+  border: solid 2px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.pegiboton .pegipopup {
+  display: grid;
+  grid-template-columns: 160px 160px;
+  grid-template-rows: 1fr 1fr;
+  background-color: transparent;
+
+}
+
+/* Información sobre cada juego de Pegi */
+.pegipopup h4 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: white;
+
+}
+
+.pegipopup h5 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color: white;
+}
+
+.pegi18 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/PEGI_18.svg/640px-PEGI_18.svg.png);
+  max-width: 100px;
+  max-height: 100px;
+  margin: auto;
+}
+
+.pegi16{
+  grid-column: 1/2;
+  grid-row: 1/3;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PEGI_16.svg/1681px-PEGI_16.svg.png);
+  max-width: 100px;
+  max-height: 100px;
+  margin: auto;
+  
+}
+.pegi12 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/PEGI_12.svg/1200px-PEGI_12.svg.png);
+  max-width: 100px;
+  max-height: 100px;
+  margin: auto;
+}
+
+.pegi3{
+  grid-column: 1/2;
+  grid-row: 1/3;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/PEGI_3.svg/1200px-PEGI_3.svg.png);
+  max-width: 100px;
+  max-height: 100px;
+  margin: auto;
+}
+
+
+/* INGORMACIÓN ADICIONAL DEL JUEGO */
+
+/* Grid de la informacion */
+.infoadicionalpopup {
+  grid-column: 3/4;
+  grid-row: 2/4;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 100px 75px 50px;
+  margin: 0px 10px;
+  text-align: center;
+
+}
+
+/* Fecha de salida del juego */
+.fechapopup {
+  color: white;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-items: center;
+  justify-content: center;
+  /* border: solid 2px rgba(255, 255, 255, 0.1); */
+  border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Etiquetas del juego */
+.etiquetaspopup {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  color: white;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+  padding-top: 17px;
+}
+
+.etiquetaspopup a {
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #2e2d2f;
+  color: white;
+  display: inline-block;
+  margin: 2px;
+
+}
+
+.etiquetaspopup a:hover {
+  border-radius: 10px solid white;
+  background-color: #686769;
+  color: #1d1d1e;
+}
+
+/* Logos de las tiendas */
+.logospopup {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 50px;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+}
+
+.steam {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  max-width: 50px;
+  max-height: 50px;
+  margin: auto;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/c/c1/Steam_Logo.png);
+}
+
+.epic {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  max-width: 50px;
+  max-height: 50px;
+  margin: auto;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/Epic_Games_logo.png);
+}
+
+.epicno{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  max-width: 50px;
+  max-height: 50px;
+  margin: auto;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/Epic_Games_logo.png);
+  filter: brightness(0.1);
+}
+
+.gog {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  max-width: 50px;
+  max-height: 50px;
+  margin: auto;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/GOG.com_logo.svg/1669px-GOG.com_logo.svg.png);
+  filter: brightness(7);
+}
+
+.gogno{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  max-width: 50px;
+  max-height: 50px;
+  margin: auto;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/GOG.com_logo.svg/1669px-GOG.com_logo.svg.png);
+  filter: brightness(0.7);
+}
+
+.eagamesno {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  max-width: 50px;
+  max-height: 50px;
+  margin: auto;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/2048px-Electronic-Arts-Logo.svg.png);
+  filter: brightness(0.1);
+}
+
+/* Boton de ver mas sobre el juego */
+.vermaspopup a {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #2e2d2f;
+  display: inline-block;
+  margin-left: 150px;
+  margin-top: 20px;
+
+}
+
+.vermaspopup a:hover {
+  border-radius: 10px solid white;
+  background-color: #686769;
+  color: #1d1d1e;
+}
+
+
+/* BOTONES PARA PASAR ENTRE POPUP */
+
+/* Boton de la izquierda para pasar del popup */
+.botonizq {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 20px;
+  height: 20px;
+  background-color: #989797;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  margin-top: 250px;
+  z-index: 3;
+}
+
+.botonizq a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Boton de la derecha para pasar del popup */
+.botonder {
+  grid-column: 4/5;
+  grid-row: 1/3;
+  width: 20px;
+  height: 20px;
+  background-color: #989797;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  margin-top: 250px;
+  margin-left: 10px;
+  z-index: 3;
+}
+
+.botonder a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/* CREA LAS LISTAS DONDE ESTÁN LAS CARATULAS
+Lo que se desplaza */
+
+/* Div que contiene el grid para tenerlo centrado */
+.contenedordecont {
+  /* grid-column: 2/3;
+  grid-row: 2/3; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 100px 1fr;
+  margin-top: 0px;
+  margin-bottom: 50px;
+
+}
+
+/* Titulo de las listas */
+.titulazo1 {
+  display: grid;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  text-transform: uppercase;
+  color: black;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.titulazo2 {
+  display: grid;
+  grid-row: 3/4;
+  grid-column: 2/3;
+  text-transform: uppercase;
+  color: black;
+  justify-content: center;
+  font-size: 40px;
+}
+
+
+/* Div en el que se encuetra el flex que crea la lista de caratulas
+está situado dentro de .contenedordecont en la fila 2 columna 2  */
+.contenedor1 {
+  /* height: 300px;
+    width: 800px; */
+  /* top: 60px; */
+  /* left: calc(50% - 300px); */
+  /* position: absolute;
+    justify-content: center; */
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+}
+
+.contenedor2 {
+  /* height: 300px;
+    width: 800px; */
+  /* top: 60px; */
+  /* left: calc(50% - 300px); */
+  /* position: absolute;
+    justify-content: center; */
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 4/5;
+
+}
+
+/* Permite hacer el efecto de las caratulas que se mueven */
+.carta {
+  display: flex;
+  justify-content: center;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+
+
+}
+
+/* Estilo de las caratulas/cartas */
+.carta img {
+  height: 280px;
+  width: 200px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carta:not(:first-child) {
+  margin-left: -50px;
+}
+
+.carta:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+
+
+}
+
+.carta:hover~.carta {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+
+
+}
+
+
+
+/* IMAGENES DE LAS CARATULAS/CARTAS */
+.carta1 {
+
+  background-image: url(https://i.3djuegos.com/juegos/16443/hollow_knight_silksong/fotos/ficha/hollow_knight_silksong-4790214.jpg);
+}
+
+.carta2 {
+  background-image: url(https://i.3djuegos.com/juegos/19059/chants_of_sennaa/fotos/ficha/chants_of_sennaa-5801430.webp);
+}
+
+.carta3{
+  background-image: url(https://i.3djuegos.com/juegos/17953/lies_of_p/fotos/ficha/lies_of_p-5728674.webp);
+}
+
+.carta4{
+  background-image: url(https://i.3djuegos.com/juegos/18376/fotos/ficha/-5775675.jpg);
+}
+
+.carta5{
+  background-image: url(https://i.blogs.es/juegos/11592/lords_of_the_fallen_2/fotos/ficha/lords_of_the_fallen_2-5729829.webp);
+}
+
+.carta6{
+  background-image: url(https://store-images.s-microsoft.com/image/apps.64810.68326442227858632.03782b23-7f26-4a8e-ba87-177bdf2c3c90.fdefe49f-270c-44e5-b660-6d7764b37f0f);
+}
+
+.carta7{
+  background-image: url(https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA08519_00/12/i_3da1cf7c41dc7652f9b639e1680d96436773658668c7dc3930c441291095713b/i/icon0.png);
+}
+
+.carta8{
+  background-image: url(https://image.api.playstation.com/cdn/EP0082/CUSA04480_00/P4ZghxHW2EEiwxim3ZZIG28aJB8LgebN.png);
+}
+
+.carta9{
+  background-image: url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/02/stardew-valley.jpg?tf=1200x);
+}
+
+.carta10{
+  background-image: url(https://uvejuegos.com/img/caratulas/62850/1_pc.jpg);
+}
+
+
+
+
+
+/* PRUEBA */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  
+}
+
+
+
+.fondo1 {
+  background-image: url(https://preview.redd.it/p72q07pmos861.png?width=3840&format=png&auto=webp&s=905ee2da1d45315c79b82df253bd7dba02e2765e);
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.fondo2 {
+  background-image: url(https://tribecafilm-production.s3.amazonaws.com/uploads/film/photo_3/5868/full_CHANTS_OF_SENNAAR-03-Clean-16x9.png);
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.fondo3 {
+  background-image: url(https://i0.wp.com/errekgamer.com/wp-content/uploads/2023/02/lies-of-p-gameplay-001-gamer-style-min.webp);
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+.fondo6 {
+  background-image: url(https://wallpapercave.com/wp/wp2225924.jpg);
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  color: transparent;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+/* MEDIA */
+
+@media(max-width: 1140px) {
+
+  .gridpopup {
+    display: grid;
+    grid-template-columns: 5% 45% 45% 5%;
+    grid-template-rows: 50% 200px 100px;
+    
+  }
+
+
+  .videopopup iframe {
+    width: 100%;
+    height: 200px;
+  }
+
+  .contenidopopup {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 10px 10px;
+    color: white;
+    font-size: 15px;
+  }
+
+
+  .pegiboton {
+    text-decoration: none;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: auto;
+    border: solid 2px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  .pegiboton .pegipopup {
+    display: grid;
+    grid-template-columns: 100px 140px;
+    grid-template-rows: 55px 50px;
+    background-color: transparent;
+
+  }
+
+  .pegipopup h4 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: white;
+    font-size: 15px;
+
+  }
+
+  .pegipopup h5 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: white;
+    font-size: 15px;
+  }
+
+
+  .pegi18 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/PEGI_18.svg/640px-PEGI_18.svg.png);
+    max-width: 100px;
+    max-height: 100px;
+    margin: auto;
+  }
+
+  .pegi16{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/PEGI_18.svg/640px-PEGI_18.svg.png);
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    
+  }
+
+  .pegi12 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/PEGI_12.svg/1200px-PEGI_12.svg.png);
+    max-width: 100px;
+    max-height: 100px;
+    margin: auto;
+  }
+
+
+
+  .vermaspopup a {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #2e2d2f;
+    display: inline-block;
+    margin-left: 150px;
+    margin-top: 10px;
+
+  }
+
+  .fondo1 {
+    background-size: cover;
+
+  }
+
+  .fondo {
+    background-size: cover;
+
+  }
+
+  .fondo6 {
+    background-size: cover;
+
+  }
+
+
+
+>>>>>>> 7a0f8eb495d27c8523bfa852f21a2202ab02aea3
 }
