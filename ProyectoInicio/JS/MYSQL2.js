@@ -1,0 +1,188 @@
+
+/*
+*******************
+    COMIENZO CLASE
+*******************
+
+*******************
+REPASO DÍA ANTERIOR
+
+    VIMOS COMO CREAR BASES DATOS, TABLAS Y REGISTROS
+
+    INICAR MYSQL
+        mysql -u root -p
+
+    MOSTRAR BASES DE DATOS
+        SHOW DATABASES
+
+    CREAR UNA BASE DE DATOS
+        CREATE DATABASE peluqueria
+    
+    USAR UNA BASE DE DATOS
+        USE peluqueria
+
+    MOSTRAR UNA TABLA
+        SHOW TABLES
+
+    CREAR UNA TABLA
+        CREATE TABLE servicios(
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        nombre VARCHAR(60), //HASTA 60 CARACTERES, SI SE PASA LO CORTA Y COGE LOS 6O PRIMEROS
+        precio DECIMAL(5,2), //100.00
+        PRIMARY KEY (id)
+        );
+
+    DEBEN TENER UN IDENTIFICADOR UNICO, ID
+    DEBEMOS INDICARLE EL TIPO DE DATO
+    EL TIPO DE DATO QUE VAYA A USAR LO CONSULTO
+
+    INFORMACIÓN ESTRUCTURA DE LA TABLA
+    DESCRIBE servicios;
+
+    REGISTROS EN TABLAS
+        CREATE
+            INSERT INTO servicios(nombre,precio) VALUE ("Tinte",5);
+        READ
+            SELECT nombre FROM servicios WHERE id=3
+        UPDATE
+            UPDATE servicios SET precio=20 WHERE id=1;
+        DELETE
+            DELETE FROM servicios WHERE id=1;
+
+FIN DEL REPASO
+******************
+
+VAMOS A  VER COMO MODIFICAR LAS TABLAS BASE DE DATOS
+    
+    DESCRIBE servicios;
+
+    AGREGAR COLUMNA
+            ALTER TABLE servicios ADD descripción VARCHAR(100) NOT NULL;
+
+            SELECT * FROM servicios;
+            LOS REGISTROS QUE TENEMOS NO TIENEN DESCRIPCIÓN
+
+    MODIFICAR COLUMNA
+            ALTER TABLE servicios CHANGE descripcion nuevonombre VARCHAR(50) NOT NULL; 
+            PODEMOS CAMBIAR EL NOMBRE Y LA EXTENSION SOLAMENTE
+            
+            EL TIPO DE DATO NO LO PUEDO CAMBIAR
+            SI ERA UN TIPO VARCHAR, NO LO PUEDO CAMBIAR A UN TIPO INT
+
+            DESCRIBE servicios;
+
+    BORRAR COLUMNA
+            ALTER TABLE servicios DROP COLUMN nuevonombre
+
+
+ELIMINAR TABLAS COMPLETAS DE MI BASE DE DATOS
+
+    MOSTRAMOS PRIMERO LAS TABLAS
+    SHOW TABLES;
+    
+    BORRAR TABLAS
+    DROP TABLE tiempos;
+    ME VA A EJECUTAR LA SENTENCIA, NO ME VA A PREGUNTAR SI ESTOY SEGURO NI NADA
+    ES UN COMANDO MUY CRITICO
+
+
+!!!!!!!!!!!!!!
+EJERCICIO
+CREAMOS UNA NUEVA TABLA reservas
+COLUMNAS (id, idcliente, hora, fecha, idservicio)
+
+CREAR AL MENOS 5 INSTANCIAS 
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE reservas (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    idclientes INT(11) NOT NULL,
+    idservicios INT(11) NOT NULL,
+    hora TIME DEFAULT NULL, // SI NO SE PASA NINGUN VALOR TOMA LA HORA DEL REGISTRO
+    fecha DATE DEFAULT NULL, // IGUAL QUE LA HORA
+    idservicio VARCHAR(255) NOT NULL,
+    PRIMARY KEY(idreservas),
+    FOREIGN KEY idservicios REFERENCE servicios(id),
+    FOREIGN KEY idclientes REFERENCE clientes(id)
+);
+
+
+
+
+
+
+
+ORDENAR CONSULTA
+
+    SELECT * FROM servicios WHERE precio>12 ORDER BY precio;
+
+SELECCIONAR DATOS ENTRE DOS VALORES
+
+    SELECT * FROM servicios WHERE precio BETWEEN 10 AND 16; INLCUIDOS
+
+FUNCIONES AGREGADORAS
+
+    CONTADOR********
+
+    SELECT COUNT (id), fecha
+    FROM reservas
+    GROUP BY fecha DESC;
+
+    ME CONTARÁ TODOS LOS ID QUE TENGAN LA MISMA FECHA Y ME LOS ORDENARÁ DE MAYOR A MENOR
+
+
+    SUMA************
+
+    SELECT SUM(precio) AS totalServicios FROM servicios; 
+    totalServicios ES UN ALIAS QUE USAMOS DE MANERA VIRTUAL
+    SE CREA EN ESE MOMENTO PARA MOSTRARLO Y NADA MÁS, PERO
+    NO EXISTE EN NUESTRA BASE DE DATOS
+
+
+    MÍNIMO/MÁXIMO*******
+
+    SELECT MIN(precio) AS precioMenor FROM servicios;
+    SELECT MAX(precio) AS precioMayor FROM servicios;
+
+
+COMO BUSCAR EN UNA BASE DE DATOS
+
+    SELECT * FROM servicios WHERE nombre LIKE "Corte%";
+
+    Corte%      INICIA CON CORTE 
+    %Corte      FINALIZA CON CORTE
+    %Corte%     CONTIENE CORTE, DA IGUAL QUE ESTÉ AL INICIO, AL FINAL O EN MEDIO
+
+CONCATENAR COLUMNAS (UNIR)
+
+    SELECT CONCAT(nombre," ",apellidos) AS nombreCompleto FROM clientes;
+    ME CREA DE NUEVO UN ALIAS VIRTUAL
+
+    SELECT * FROM clientes
+    WHERE CONCAT(nombre," ",apellidos) LIKE "%Juan Bartolo%";
+
+    SELECT nombre, apellidos, CONCAT(nombre," ",apellidos) as nombreCompleto FROM clientes;
+    ME AÑADE UNA COLUMNA NUEVA CON LA CONCATENACIÓN, PERO ES VIRTUAL
+    SIEMPRE QUE CREO UN ALIAS ES VIRTUAL, NO SE ALMACENA EN MI TABLA
+
+MUTIPLES CONDICIONES
+
+    SELECT * FROM reservas WHERE id IN(1,3,4);
+    CON EL IN LE DAMOS MÚLTIPLES VALORES
+
+    SELECT * FROM reservas WHERE fecha="2023-03-29" AND id>3;
+    EL OPERADOR AND ME PERMITE APLICAR MÚLTIPLES CONDICIONES
+
+
+
+*/

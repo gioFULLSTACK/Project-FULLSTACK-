@@ -327,10 +327,8 @@ figcaption {
 
 /* Etiquetas del juego */
 .etiquetaspopup {
-  grid-column: 1/2;
-  grid-row: 1/2;
   display: flex;
-  align-items: flex-start;
+  align-self: start;
   color: white;
   border-bottom: solid 2px rgba(255, 255, 255, 0.1);
   padding-top: 17px;
@@ -366,15 +364,19 @@ figcaption {
 
 .prices {
   display: grid;
-  grid-row: 1;
-  grid-column: 3;
-  justify-content: center;
-  justify-items: center;
+  grid-row: 1/3;
+  grid-column: 2/4;
+  justify-content: space-around;
+  justify-items: space-around;
 }
 .prices p{
   margin-top:80px;
+  margin-bottom: 30px;
+  margin-left:6px;
+  margin-right:20px;
+  align-content: space-between;
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 /* VIDEO del juego
@@ -392,7 +394,7 @@ figcaption {
 /* De que va el juego / RESUMEN */
 .contenidopopup {
   grid-column: 1fr;
-  grid-row: 3/4;
+  grid-row: 4/5;
   max-height: 100%;
   max-width: 100%;
   margin: 10px 10px;
@@ -403,7 +405,7 @@ figcaption {
 .contenidopopup p {
 
   color: white;
-  margin-top: 10px;
+  margin-top: 69px;
 }
 
 /* Logos de las tiendas */
@@ -419,14 +421,14 @@ figcaption {
 
 
 .logospopup {
-  grid-column: 1fr;
+  grid-column: 1/4;
   grid-row:2/3;
   align-items:center;
-  /* margin-right:100px; */
-  /* margin-left:50px; */
+  margin-right:100px;
+  margin-left:50px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+  /* border-bottom: solid 2px rgba(255, 255, 255, 0.1); */
 
   height: 100%;
 }
@@ -453,15 +455,15 @@ figcaption {
   background-repeat: no-repeat;
 }
 
-/* .epicn{
+.epicno{
   grid-column: 2/3;
   grid-row: 1/2;
   max-width: 50px;
   max-height: 50px;
   margin: auto;
   content: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/Epic_Games_logo.png);
-  /* filter: brightness(0.1); */
-
+  filter: brightness(0.1);
+} 
 
 .gog {
   grid-column: 3/4;
@@ -475,15 +477,15 @@ figcaption {
   background-repeat: no-repeat;
 }
 
-/* .gogno{
-  grid-column: 2/3;
+.gogno{
+  grid-column: 3/4;
   grid-row: 1/2;
   max-width: 50px;
   max-height: 50px;
   margin: auto;
   content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/GOG.com_logo.svg/1669px-GOG.com_logo.svg.png);
   filter: brightness(0.7);
-} */
+}
 
 .eagames {
   grid-column: 4/5;
@@ -496,7 +498,15 @@ figcaption {
   background-repeat: no-repeat;
 
 }
-
+.eagamesno {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  max-width: 50px;
+  max-height: 50px;
+  margin: auto;
+  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/2048px-Electronic-Arts-Logo.svg.png);
+  filter: brightness(0.1);
+}
 /* PEGI */
 
 /* Boton que lleva a la pagina del Pegi */
