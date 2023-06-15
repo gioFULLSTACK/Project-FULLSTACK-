@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<?php 
+    require "consultas.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -32,6 +35,30 @@
 
 
 <body>
+
+    <h1> VAMOS A PONER DBAJO DE MIS SERVICIOS CON PHP </h1>
+    <?php
+        while ($servicio = mysqli_fetch_assoc($consulta)){
+    ?>
+        <div>
+            <h3>
+                <?php
+                echo($servicio["nombre"]);
+                ?>
+            </h3>
+            <p>
+                <?php
+                echo($servicio["precio"]);
+                ?>
+            </p>
+        </div>    
+        <?php     
+    }
+    ?>
+
+
+
+
     <!-- <div class="EjercicioFlex">
         <a href="#">ENLACE 1</a>
         <a href="#"> ENLACE2 </a>
