@@ -231,7 +231,7 @@ figcaption {
   font-weight: bold;
   color: var(--white-1);
   letter-spacing: 2px;
-  padding: 9px 20px;
+  padding: 9px 7px;
   border: 1px solid var(--grey);
   border-radius: 1000px;
   background: transparent;
@@ -391,13 +391,34 @@ figcaption {
   width: 100%;
 
 } */
+.paginaindex2{
+  display: block;
 
+  width: auto;
+  margin-top: 12%;
+  padding: 8px 22px;
+
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+  text-align: right;
+
+  position: absolute;
+  top: 0;
+  right: 12px;
+
+  color: var(--white-1);
+  background: hsla(var(--hue), 25%, 10%, .5);
+}
 /* De que va el juego / RESUMEN */
 .contenidopopup {
-  grid-column: 1fr;
-  grid-row: 4/5;
+  /* grid-column: 1fr;
+  grid-row: 4/5; */
   max-height: 100%;
   max-width: 100%;
+  width:100px;
+  height:100px;
   margin: 10px 10px;
 
 
