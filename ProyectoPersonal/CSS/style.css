@@ -48,9 +48,9 @@ body {
   /* grid-row: 20px 3fr; */
 }
 
-.gridcontainer div {
-  grid-row: span 3;
-}
+/* .gridcontainer div {
+  grid-row: span 1;
+} */
 
 .cyberpunk {
   grid-row: 1/4;
@@ -195,7 +195,7 @@ figcaption {
   color: var(--white-1);
   background: hsla(var(--hue), 25%, 10%, .5);
 }
-.figcaption 
+
 
 .img-bg .img-bg {
   background: hsla(var(--hue), 25%, 10%, .5);
@@ -232,14 +232,13 @@ figcaption {
   background: transparent;
   transition: .3s;
   cursor: pointer;
-  /* parte añadida de paula */
   font-size: 1em;
   cursor: pointer;
   transition: all 0.3s ease-out;
+  
 }
 
-
-
+/* STATES BOTTON DE LOS QUE NO SON CYBER */
 .button:hover,
 .button:focus {
   color: var(--primary);
@@ -252,8 +251,6 @@ figcaption {
   transform: translate(2px);
 }
 
-
-/* states */
 .button:hover+.design-container,
 .button:active+.design-container,
 .button:focus+.design-container {
@@ -261,90 +258,79 @@ figcaption {
   --op: .7;
 }
 
-
-
-
-
-/* PARTE MODAL PARA QUE AL HACER CLICK SALGA EL POPUP??? */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  overflow: hidden;
-
-}
-
-/*  END PARTE MODAL PARA QUE AL HACER CLICK SALGA EL POPUP??? */
-
-
-/* INIZIO PROVA POPUP NUOVO */
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #080808;
-  border-radius: 5px;
-  width: 40%;
-  height: 78%;
-  position: relative;
-  transition: all 2s ease-in-out;
-}
-
-/* Boton para cerar el popup */
-.popup .cerrarpopup {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
+/* BOTTON DE CYBERPUNK */
+.button23{
+  font-family: inherit;
   font-weight: bold;
-  text-decoration: none;
-  color: #b9b7b7;
-  z-index: 5;
+  color: var(--white-1);
+  letter-spacing: 2px;
+  padding: 15px 20px;
+  border: 1px solid var(--grey);
+  border-radius: 1000px;
+  background: transparent;
+  transition: .3s;
+  /* parte añadida de paula */
+  font-size: 1em;
+  /* cursor: pointer; */
+  transition: all 0.3s ease-out;
+  position: absolute;
+  top:450px;
+  right:20px;
+}
+.button23:hover,
+.button23:focus {
+  color: var(--primary);
+  background: hsla(var(--hue), 25%, 10%, .2);
+  background-color: white;
+  border-color: currentColor;
 }
 
-.popup .cerrarpopup:hover {
-  color: #3a1ea0;
+.button23:active {
+  transform: translate(2px);
 }
 
-.popup h2 {
-  color: white;
+.button23:hover+.design-container,
+.button23:active+.design-container,
+.button23:focus+.design-container {
+  --tr: 20;
+  --op: .7;
+}
+/* BOTTONE VER MAS ABAJO DE TODO */
+
+.buttonBIG {
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--white-1);
+  letter-spacing: 2px;
+  padding: 9px 7px;
+  border: 1px solid var(--grey);
+  border-radius: 1000px;
+  background: transparent;
+  transition: .3s;
+  cursor: pointer;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  
 }
 
-.popup h3 {
-  color: white;
+.buttonBIG:hover,
+.buttonBIG:focus {
+  color: var(--primary);
+  background: hsla(var(--hue), 25%, 10%, .2);
+  background-color: white;
+  border-color: currentColor;
 }
 
-/* FINE PROVA POPUP NUOVO */
-
-/* Etiquetas del juego */
-.etiquetaspopup {
-  display: flex;
-  align-self: start;
-  color: white;
-  border-bottom: solid 2px rgba(255, 255, 255, 0.1);
-  padding-top: 17px;
+.buttonBIG:active {
+  transform: translate(2px);
 }
 
-.etiquetaspopup a {
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: #2e2d2f;
-  color: white;
-  display: inline-block;
-  margin: 2px;
-
-}
-
-.etiquetaspopup a:hover {
-  border-radius: 10px solid white;
-  background-color: #686769;
-  color: #1d1d1e;
+.buttonBIG:hover+.design-container,
+.buttonBIG:active+.design-container,
+.buttonBIG:focus+.design-container {
+  --tr: 20;
+  --op: .7;
 }
 
 /* Grid principal que separa las partes del popup */
@@ -364,6 +350,7 @@ figcaption {
   grid-column: 2/4;
   justify-content: space-around;
   justify-items: space-around;
+  margin-top: 20px;
 }
 .prices p{
   margin-top:80px;
@@ -375,22 +362,12 @@ figcaption {
   font-size: 20px;
 }
 
-/* VIDEO del juego
-.videopopup {
 
-  grid-column: 2/4;
-  grid-row: 1/2;
-}
-
-.videopopup iframe {
-  width: 100%;
-
-} */
 .paginaindex2{
   display: block;
 
   width: auto;
-  margin-top: 12%;
+  margin-top: 21%;
   padding: 8px 22px;
 
   font-weight: bold;
@@ -398,44 +375,13 @@ figcaption {
   letter-spacing: 2px;
   word-spacing: 6px;
   text-align: right;
-
   position: absolute;
   top: 0;
   right: 12px;
-
   color: var(--white-1);
-  background: hsla(var(--hue), 25%, 10%, .5);
-}
-/* De que va el juego / RESUMEN */
-.contenidopopup {
-  /* grid-column: 1fr;
-  grid-row: 4/5; */
-  max-height: 100%;
-  max-width: 100%;
-  width:100px;
-  height:100px;
-  margin: 10px 10px;
-
-
 }
 
-.contenidopopup p {
-
-  color: white;
-  margin-top: 69px;
-}
-
-/* Logos de las tiendas */
-
-/* ATTEMPT 2 */
-.icon-bright {
-  filter: brightness(100%);
-}
-
-.icon-dim {
-  filter: brightness(0.7);
-}
-
+/* LOGOS de las tiendas */
 
 .logospopup {
   grid-column: 1/4;
@@ -446,7 +392,6 @@ figcaption {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   /* border-bottom: solid 2px rgba(255, 255, 255, 0.1); */
-
   height: 100%;
 }
 
@@ -524,45 +469,60 @@ figcaption {
   content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/2048px-Electronic-Arts-Logo.svg.png);
   filter: brightness(0.1);
 }
-/* PEGI */
 
-/* Boton que lleva a la pagina del Pegi */
-.pegiboton {
-  text-decoration: none;
-  grid-column: 2/3;
-  grid-row: 3/4;
-  margin: auto;
-  border: solid 2px rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+@media(max-width:1140px){
+  
+}
+@media(max-width:780px){
+  .flip-card-container{
+    max-width:370px;
+  };
+  .flip-card-container .cyberpunkleft{
+    max-width:370px;
+  }
 }
 
-.pegiboton .pegipopup {
-  display: grid;
-  grid-template-columns: 160px 160px;
-  grid-template-rows: 1fr 1fr;
-  background-color: transparent;
-
+@media(max-width:480px){
+.gridcontainer{
+  grid-template-columns: 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  max-width:350px;
 }
-
-/* Información sobre cada juego de Pegi */
-.pegipopup h4 {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  color: white;
-
+.grid-divide{
+  /* margin: 10px 0px 0px 0px; */
+  max-width:420px;
+  height:600px;
 }
-
-.pegipopup h5 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  color: white;
+.grid-divide div{
+  max-height:250px;
 }
-
-.pegi18 {
-  grid-column: 1/2;
-  grid-row: 1/3;
-  content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/PEGI_18.svg/640px-PEGI_18.svg.png);
-  max-width: 100px;
-  max-height: 100px;
-  margin: auto;
+.cyberpunk div{
+  height:500px;
+  width:350px;
+}
+.prices{
+  margin-left:20px;
+  margin-top:70px;
+}
+.button{
+  margin-top:30px;
+  position: absolute;
+  top:40px;
+  right:5px;
+}
+.button23{
+  position:absolute;
+  top:410px;
+}
+.buttonBIG{
+  position:absolute;
+  left:330px;
+}
+.steam .epic .epicno .gog .gogno .ea .eagamesno{
+  width:45px;
+  height:20px;
+}
+.grid-divide figcaption{
+  margin-top:5%;
+}
 }
